@@ -1,8 +1,17 @@
 public class Personagem {
     String nome;
-    int fome = 0;
-    int energia = 10;
-    int sono = 0;
+    private int fome = 0;
+    private int energia = 10;
+    private int sono = 0;
+
+    
+    public Personagem(){}
+
+    public Personagem(int fome, int energia, int sono){
+        this.fome = Math.max(Math.min(fome,10),0);
+        this.energia = Math.max(Math.min(energia,10),0);
+        this.sono = Math.max(Math.min(sono,10),0);
+    }
 
     void cacar(){
         if(energia >= 2){

@@ -1,24 +1,17 @@
 import java.util.Random;
 
-import javax.swing.event.SwingPropertyChangeSupport;
-
 public class JogoV2 {
 
     public static void main(String [] args)throws Exception{
-        
+
+        var gerador = new Random();   
         var p = new Personagem();
-        var p2 = new Personagem();
-        var gerador = new Random();
-        var p3 = new Personagem();
+        var p2 = new Personagem(0,0,10);
+        var p3 = new Personagem(500,-5,4);
         p.nome = "Messi";
         p2.nome = "Soneca";
-        p2.sono = 50;
-        p2.energia = 1;
-        p2.fome = 1;
         p3.nome = "Al Mossar";
-        p3.sono = 4;
-        p3.fome = 10;
-        p3.energia = 2;
+
 
 
         while(true){
